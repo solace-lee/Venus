@@ -1,2 +1,4 @@
 <!--pages/exam/exam.wxml-->
-<text>pages/exam/exam.wxml</text>
+<view class='container'>
+  <view>考试列表</view>
+</view>
