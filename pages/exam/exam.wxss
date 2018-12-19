@@ -1,1 +1,4 @@
 /* pages/exam/exam.wxss */
+.container{
+  width: 750rpx;
+}

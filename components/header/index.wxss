@@ -1,0 +1,21 @@
+/* components/header/header.wxss */
+.container{
+  /* width: 100%; */
+  width: 750rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* background: #eee; */
+}
+
+.user-name{
+  color: #333;
+  margin-left: 42rpx;
+}
+
+.login-btn{
+  color: #363;
+  margin-right: 42rpx;
+}

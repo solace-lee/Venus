@@ -1,4 +1,4 @@
 <!--pages/exam/exam.wxml-->
 <view class='container'>
-  <view>考试列表</view>
+  <v-header></v-header>
 </view>
