@@ -1,4 +1,7 @@
 <!--pages/exam/exam.wxml-->
 <view class='container'>
-  <v-header></v-header>
+  <v-header class="header" userType="{{}}" userName="{{}}"></v-header>
+  <block wx:for="{{examList}}" wx:key="">
+    <v-examlist class="list" examInfo="{{item}}"></v-examlist>
+  </block>
 </view>

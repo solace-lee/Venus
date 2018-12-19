@@ -1,0 +1,32 @@
+/* components/exam-list/index.wxss */
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.list{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15rpx; 
+  margin-top: 15rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.classinfo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 32rpx;
+  color: #333;
+  margin-top: 5rpx;
+}
+
+.schoolinfo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 5rpx;
+}

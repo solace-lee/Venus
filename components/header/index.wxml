@@ -1,6 +1,7 @@
 <!--components/header/header.wxml-->
 <view class='container'>
-  <view class='user-name'>用户名：李祖明</view>
-  <view class='login-btn'>登录</view>
-  <!-- <view class='login-btn'>登出</view> -->
+  <view class='user-name'>{{userName}}</view>
+  <!-- <image src="{{avatarUrl}}" /> -->
+  <view wx:if="{{showLogin}}" bind:tap='goLoginIn' class='login-btn'>登录</view>
+  <view wx:if="{{!showLogin}}" bind:tap='goLoginOut' class='login-btn'>登出</view>
 </view>
