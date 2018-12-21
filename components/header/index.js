@@ -4,13 +4,11 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    userType: {
-      type: Number,
-      value: 0
+    isLogin: {
+      type: Boolean
     },
     userName: {
-      type: String,
-      value: '用户名'
+      type: String
     }
   },
 
@@ -22,7 +20,7 @@ Component({
   },
 
   attached: function (event) {
-    this.isLogin()
+
   },
   /**
    * 组件的方法列表
@@ -41,12 +39,14 @@ Component({
     },
 
     goLoginIn(event) {
-      console.log('登录功能');
+      wx.nav
     },
 
     goLoginOut(event){
-      console.log('登出功能');
-      
+      wx.setStorageSync('login', null)
+      wx.redirectTo({
+        url: '/pages/login/login'
+      })
     }
 
   }

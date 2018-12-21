@@ -12,6 +12,7 @@
 .user-name{
   color: #333;
   margin-left: 42rpx;
+  font-size: 36rpx;
 }
 
 .login-btn{
@@ -19,5 +20,6 @@
   margin-right: 32rpx;
   padding: 5rpx 10rpx;
   border-radius: 5rpx;
+  font-size: 36rpx;
   /* background: #eee */
 }

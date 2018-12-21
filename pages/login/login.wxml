@@ -1,0 +1,19 @@
+<!--pages/login/login.wxml-->
+<view class='container'>
+  <image class='icon' src='/images/logo.png'></image>
+  <view class='title'>成绩查询</view>
+  
+  <view class='input-bar'>
+    <input wx:if="{{!userType}}" bindinput="userNameInput" placeholder-class='in-bar' value='{{userName}}' placeholder='学生姓名' class='bar' auto-focus='true' />
+    <input wx:if="{{userType}}" bindinput="teacherNameInput" placeholder-class='in-bar' value='{{teacherName}}' placeholder='教师姓名' class='bar' auto-focus='true' />
+    <input value='{{password}}' bindinput="passwordInput" placeholder-class='in-bar' placeholder='登录密码' bind:confirm="login" class='bar' />
+  </view>
+  <view class='btn'>
+    <button bind:tap="login">登录</button>
+    <button bind:tap="clean">清除</button>
+  </view>
+  <view class='btn'>
+    <view class='changeType' bind:tap="changeType">切换账号</view>
+    <view class='refresh' bind:tap="refresh">刷新数据</view>
+  </view>
+</view>

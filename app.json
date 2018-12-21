@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/exam/exam"
+    "pages/login/login",
+    "pages/exam/exam"    
   ],
   "window": {
     "backgroundTextStyle": "light",
