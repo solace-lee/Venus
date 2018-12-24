@@ -1,0 +1,24 @@
+<!-- pages/student-list/student-list.wxml -->
+<view class="container">
+  <view class="header">
+    <view class="title">
+      <view class='examName'>{{examName}}</view>
+      <view class='select-btn'>
+        <picker mode="selector" value="{{index}}" range="{{classList}}" bindchange="bindClassListChange">
+          <view class="picker">{{classList[index]}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="list-header">
+      <view class="name">姓名</view>
+      <view class="sum">总分</view>
+      <view class="schoolRank">级排</view>
+      <view class="classRank">班排</view>
+    </view>
+  </view>
+  <view class="list-container">
+    <block wx:for="{{studentList}}" wx:key="">
+      <v-show-list studentList="{{item}}"></v-show-list>
+    </block>
+  </view>
+</view>

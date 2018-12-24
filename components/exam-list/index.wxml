@@ -2,9 +2,12 @@
 <view class='container'>
   <view class='list' bind:tap='onExam'>
     <view class='classinfo'>
-      <view>{{examInfo.examName}}</view>
-      <view wx:if="{{examInfo.sum}}">总分:{{examInfo.sum}}</view>
+      <view class='examName'>{{examInfo.examName}}</view>
+    </view>
+    <view class='schoolinfo'>
+    <view wx:if="{{examInfo.sum}}">总分:{{examInfo.sum}}</view>
       <view wx:if="{{examInfo.schoolRank}}">级排:{{examInfo.schoolRank}}</view>
+      <view wx:if="{{examInfo.classRank}}">班排:{{examInfo.classRank}}</view>
     </view>
     <view class='schoolinfo'>
       <view>高:{{examInfo.max}}</view>

@@ -9,8 +9,8 @@
     <input value='{{password}}' bindinput="passwordInput" placeholder-class='in-bar' placeholder='登录密码' bind:confirm="login" class='bar' />
   </view>
   <view class='btn'>
-    <button bind:tap="login">登录</button>
-    <button bind:tap="clean">清除</button>
+    <button class='btn-btn' bind:tap="login">登录</button>
+    <button class='btn-btn' bind:tap="clean">清除</button>
   </view>
   <view class='btn'>
     <view class='changeType' bind:tap="changeType">切换账号</view>

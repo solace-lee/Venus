@@ -2,12 +2,12 @@
 import {
   ExamModel
 } from '../../modules/exam.js'
-import {
-  GetData
-} from '../../util/getData.js'
+// import {
+//   GetData
+// } from '../../util/getData.js'
 
 const examModel = new ExamModel()
-const getData = new GetData()
+// const getData = new GetData()
 
 Page({
 
@@ -18,21 +18,7 @@ Page({
     userName: '',
     isLogin: null,
     database: [],
-    List: [{
-      examName: "第一次月考",
-      sum: "510",
-      schoolRank: "44",
-      max: "555",
-      Average: "500",
-      min: "320"
-    }, {
-      examName: "第二次月考",
-      sum: "25",
-      schoolRank: "46",
-      max: "575",
-      Average: "540",
-      min: "420"
-    }]
+    List: []
   },
 
   /**
@@ -42,29 +28,60 @@ Page({
 
   },
 
-  getData() {
+  loadData() {
     this.setData({
       userName: examModel.getUserName(),
       userType: examModel.getUserType(),
       isLogin: examModel.getIsLogin(),
       database: examModel.getDatabase(),
-      examList: examModel.getExamList()
+      examList: examModel.getExamList(),
+      userExamList: examModel.getUserExamList()
     })
+    this.data.List = []
     this.list()
   },
 
   list() {
-    let exam = this.data.examList
-    let data = this.data.database
+    let exam = this.data.examList //考试名称列表
+    let data = this.data.database //基础数据
+    let userData = this.data.userExamList //家长账户中获取的学生信息
+    let listInfo = [] //最终生成的数据
     for (let i = 0; i < exam.length; i++) {
       let arr = []
+      let sum = 0
+      let examCell = {}
       data.forEach(element => {
-        if (element.examName == exam[i]){
+        if (element.examName == exam[i]) {
           arr.push(element.sum)
+          sum += element.sum
         }
       })
-      console.log(arr);
+      examCell.examName = exam[i]
+      examCell.Average = (sum / arr.length).toFixed(2)
+      examCell.max = Math.max.apply(Math, arr)
+      examCell.min = Math.min.apply(Math, arr)
+      //以上是根据考试名生成改考试的学生总分平均分，最高分，最低分
+      //以下是获取该学生在对于考试名中的总分，级排名，班排名
+      if (!this.data.userType) {
+        let userSum = 0
+        let userSchoolRank = 0
+        let userClassRank = 0
+        userData.forEach(element => {
+          if (element.examName == exam[i]) {
+            userSum = element.sum
+            userSchoolRank = element.schoolRank
+            userClassRank = element.classRank
+          }
+        })
+        examCell.sum = userSum
+        examCell.schoolRank = userSchoolRank
+        examCell.classRank = userClassRank
+      }
+      listInfo.push(examCell)
     }
+    this.setData({
+      List: listInfo
+    })
   },
 
 
@@ -80,7 +97,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.getData()
+    this.loadData()
   },
 
   /**

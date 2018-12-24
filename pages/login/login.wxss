@@ -1,5 +1,6 @@
 /* pages/login/login.wxss */
-.container{
+
+.container {
   position: absolute;
   top: 0;
   display: flex;
@@ -11,34 +12,43 @@
   align-items: center;
 }
 
-.icon{
+.icon {
   width: 144rpx;
   height: 144rpx;
   /* border-radius: 50%; */
 }
 
-.btn{
+.title {
+  color: #50bba7;
+}
+
+.btn {
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.changeType{
-  color: #999;
+.changeType {
+  color: #50bba7;
   font-size: 28rpx;
 }
 
-.refresh{
-  color: #999;
+.refresh {
+  color: #50bba7;
   font-size: 28rpx;
 }
 
-.input-bar{
+.input-bar {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   height: 200rpx;
+  color: #50bba7;
+}
+
+.btn-btn {
+  color: #50bba7;
 }
 
 .bar {
@@ -49,6 +59,6 @@
   width: 460rpx;
 }
 
-.in-bar{
-  color: #999;
+.in-bar {
+  color: #50bba7;
 }

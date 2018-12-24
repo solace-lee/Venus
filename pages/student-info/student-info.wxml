@@ -1,0 +1,7 @@
+<!--pages/student-info/student-info.wxml-->
+<view class='examName'>{{showData.examName}}</view>
+<view>{{showData.className}}</view>
+<view>
+  <view class='list'>{{showData.name}}</view>
+
+</view>

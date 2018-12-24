@@ -1,0 +1,7 @@
+<!--components/show-list/index.wxml-->
+<view class="container" bind:tap="onclicktap">
+  <view class="name">{{studentList.name}}</view>
+  <view class="sum">{{studentList.sum}}</view>
+  <view class="schoolRank">{{studentList.schoolRank}}</view>
+  <view class="classRank">{{studentList.classRank}}</view>
+</view>

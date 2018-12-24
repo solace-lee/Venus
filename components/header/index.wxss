@@ -10,7 +10,7 @@
 }
 
 .user-name{
-  color: #333;
+  color: #50bba7;
   margin-left: 42rpx;
   font-size: 36rpx;
 }

@@ -57,7 +57,7 @@ class ExamModel extends GetData {
     return isLogin
   }
 
-  getExamList() {
+  getUserExamList() {
     return userExamList
   }
 
@@ -73,6 +73,38 @@ class ExamModel extends GetData {
     return classList
   }
 
+  getExamNameOfData(examName) {
+    // 根据考试名从基础数据筛选出对应数据
+    let list = []
+      database.forEach(element => {
+        if (element.examName == examName) {
+          list.push(element)
+        }
+      })
+      return list
+    }
+
+    getClassNameOfData(arr, className){
+      // 根据给定的班级名从给定的数组筛选
+      let list = []
+      arr.forEach(element => {
+        if (element.className == className) {
+          list.push(element)
+        }
+      })
+      return list
+    }
+
+    getStudentInfo(name, examName){
+      // 根据给定的名字和考试名，从基础数据中筛选
+      let list = []
+      database.forEach(element => {
+        if (element.examName == examName && element.name == name) {
+          list.push(element)
+        }
+      })
+      return list
+    }
 
 }
 

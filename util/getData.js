@@ -13,7 +13,7 @@ class GetData extends HTTP {
       wx.showToast({
         title: '获取基础数据成功',
         icon: 'none',
-        duration: 1000
+        duration: 800
       })
     },
     (err)=>{

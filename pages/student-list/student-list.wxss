@@ -1,0 +1,69 @@
+/* pages/student-list/student-list.wxss */
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 140rpx;
+}
+
+.title {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 32rpx;
+  border-bottom: 1px solid #f5f5f5;
+  background: #fff;
+}
+
+.examName {
+  padding: 10rpx;
+  margin-left: 20rpx;
+  color: #50bba7;
+}
+
+.picker{
+  color: #fff;
+  padding: 10rpx;
+  background: rgba(80, 187, 167, .8);
+  border-radius: 10rpx;
+}
+
+.select-btn {
+  padding: 10rpx;
+  margin-right: 20rpx;
+}
+
+.list-header {
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 32rpx;
+  color: #50bba7;
+  background: #eee;
+}
+
+.list-container {
+  background: #fff;
+  margin-top: 180rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+}

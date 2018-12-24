@@ -46,7 +46,13 @@ Page({
     } else {
       const userInfo = wx.getStorageSync("login") || null
       if (!(userInfo == null)) {
+        wx.showLoading()
         // 如果存在保存的登录数据
+        // wx.showToast({
+        //   title: '正在自动登陆',
+        //   icon: 'none',
+        //   duration: 1000
+        // })
         if (!userInfo.userType) {
           // 家长登录
           this.data.userName = userInfo.userName
@@ -84,6 +90,7 @@ Page({
     })
   },
 
+  // 对输入框的内容进行实时绑定
   userNameInput(event) {
     this.data.userName = event.detail.value
   },
@@ -102,8 +109,10 @@ Page({
     if (!this.data.userType) {
       const data = this.data.database
       if (data.length == 0) {
+        // 判断基础数据是否加载成功
         const msg = '请刷新数据后重试'
         this._showMsg(msg)
+        wx.hideLoading()
         return
       }
       for (let i = 0; i < data.length; i++) {
@@ -153,6 +162,7 @@ Page({
         });
       })
     }
+    wx.hideLoading()
   },
 
   _showMsg(event) {
@@ -163,18 +173,18 @@ Page({
     })
   },
 
-  goNext(){
+  goNext() {
     wx.redirectTo({
       url: '/pages/exam/exam'
     })
   },
 
-  setToken(){
+  setToken() {
     examModel.setUserType(this.data.userType)
     examModel.setIsLogin(this.data.isLogin)
-    if(this.data.userType){
+    if (this.data.userType) {
       examModel.setUserName(this.data.teacherName)
-    }else{
+    } else {
       examModel.setUserName(this.data.userName)
     }
   },
