@@ -16,8 +16,11 @@ Page({
    */
   data: {
     userName: '',
+    userType: null,
     isLogin: null,
     database: [],
+    examList: [],
+    userExamList: [],
     List: []
   },
 
@@ -57,9 +60,11 @@ Page({
         }
       })
       examCell.examName = exam[i]
-      examCell.Average = (sum / arr.length).toFixed(2)
-      examCell.max = Math.max.apply(Math, arr)
-      examCell.min = Math.min.apply(Math, arr)
+      if (this.data.userType) {
+        examCell.Average = (sum / arr.length).toFixed(2)
+        examCell.max = Math.max.apply(Math, arr)
+        examCell.min = Math.min.apply(Math, arr)
+      }
       //以上是根据考试名生成改考试的学生总分平均分，最高分，最低分
       //以下是获取该学生在对于考试名中的总分，级排名，班排名
       if (!this.data.userType) {
@@ -98,6 +103,9 @@ Page({
    */
   onShow: function () {
     this.loadData()
+    wx.setTabBarStyle({
+      selectedColor: '#50bba7'
+    })
   },
 
   /**

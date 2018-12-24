@@ -37,6 +37,14 @@ Component({
             url: '/pages/student-list/student-list?examName=' + examName,
           })
         } else {
+          const list = examModel.getUserExamList()
+          let info = {}
+          list.forEach(element => {
+            if (element.examName == examName) {
+              info = element
+            }
+          })
+          wx.setStorageSync('info', info)
           wx.navigateTo({
             url: '/pages/student-info/student-info?examName=' + examName,
           })

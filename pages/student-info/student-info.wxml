@@ -1,7 +1,62 @@
-<!--pages/student-info/student-info.wxml-->
-<view class='examName'>{{showData.examName}}</view>
-<view>{{showData.className}}</view>
-<view>
-  <view class='list'>{{showData.name}}</view>
-
+<!-- pages/student-info/student-info.wxml -->
+<view class="container">
+  <view class="title-header">
+    <view class="title">
+      <view title="item">{{showData.className}}</view>
+      <view class='item'>{{showData.examName}}</view>
+      <view class='item'>{{showData.name}}</view>
+    </view>
+    <view class="sub-title">
+      <view class='sub'>科目</view>
+      <view class='sub'>分数</view>
+    </view>
+  </view>
+  <view class="subject-info">
+    <view class="sub-info">
+      <view class='sub'>语文</view>
+      <view class='{{showData.chinese >= 60 ? "list" : "list-red"}}'>{{showData.chinese}}</view>
+    </view>
+    <view class="sub-info">
+      <view class='sub'>数学</view>
+      <view class='{{showData.math >= 60 ? "list" : "list-red"}}'>{{showData.math}}</view>
+    </view>
+    <view class="sub-info">
+      <view class='sub'>英语</view>
+      <view class='{{showData.english >= 60 ? "list" : "list-red"}}'>{{showData.english}}</view>
+    </view>
+    <view class="sub-info">
+      <view class='sub'>政治</view>
+      <view class='{{showData.politics >= 60 ? "list" : "list-red"}}'>{{showData.politics}}</view>
+    </view>
+    <view class="sub-info">
+      <view class='sub'>生物</view>
+      <view class='{{showData.biology >= 60 ? "list" : "list-red"}}'>{{showData.biology}}</view>
+    </view>
+    <view class="sub-info">
+      <view class='sub'>地理</view>
+      <view class='{{showData.geography >= 60 ? "list" : "list-red"}}'>{{showData.geography}}</view>
+    </view>
+    <view class="sub-info">
+      <view class='sub'>历史</view>
+      <view class='{{showData.history >= 60 ? "list" : "list-red"}}'>{{showData.history}}</view>
+    </view>
+    <view class="sub-info">
+      <view class='sub'>物理</view>
+      <view class='{{showData.physics >= 60 ? "list" : "list-red"}}'>{{showData.physics}}</view>
+    </view>
+    <view class="sub-info">
+      <view class='sub'>化学</view>
+      <view class='{{showData.chemistry >= 60 ? "list" : "list-red"}}'>{{showData.chemistry}}</view>
+    </view>
+  </view>
+  <view class="rank">
+    <view class='rank-info'>总分</view>
+    <view class='rank-info'>级排名</view>
+    <view class='rank-info'>班排名</view>
+  </view>
+  <view class="rank rank-foot">
+    <view class='rank-info'>{{showData.sum}}</view>
+    <view class='rank-info'>{{showData.schoolRank}}</view>
+    <view class='rank-info'>{{showData.classRank}}</view>
+  </view>
 </view>

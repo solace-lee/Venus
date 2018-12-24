@@ -10,9 +10,9 @@
       <view wx:if="{{examInfo.classRank}}">班排:{{examInfo.classRank}}</view>
     </view>
     <view class='schoolinfo'>
-      <view>高:{{examInfo.max}}</view>
-      <view>平均:{{examInfo.Average}}</view>
-      <view>低:{{examInfo.min}}</view>
+      <view wx:if="{{examInfo.max}}">高:{{examInfo.max}}</view>
+      <view wx:if="{{examInfo.Average}}">平均:{{examInfo.Average}}</view>
+      <view wx:if="{{examInfo.min}}">低:{{examInfo.min}}</view>
     </view>
   </view>
 </view>

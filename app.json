@@ -3,12 +3,34 @@
     "pages/login/login",
     "pages/exam/exam",
     "pages/student-list/student-list",
-    "pages/student-info/student-info"
+    "pages/student-info/student-info",
+    "pages/subject/subject",
+    "pages/more/more"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#50bba7",
     "navigationBarTitleText": "启明中学",
     "navigationBarTextStyle": "White"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/exam/exam",
+      "text": "考试",
+      "iconPath": "images/tab/exam.png",
+      "selectedIconPath": "images/tab/exam@highlight.png"
+    },
+    {
+      "pagePath": "pages/subject/subject",
+      "text": "科目",
+      "iconPath": "images/tab/subject.png",
+      "selectedIconPath": "images/tab/subject@highlight.png"
+    },
+    {
+      "pagePath": "pages/more/more",
+      "text": "更多",
+      "iconPath": "images/tab/more.png",
+      "selectedIconPath": "images/tab/more@highlight.png"
+    }]
   }
 }

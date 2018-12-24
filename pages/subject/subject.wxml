@@ -1,0 +1,31 @@
+<!-- pages/subject/subject.wxml -->
+<view class="container">
+  <view class="list-container">
+    <view class="list" bind:tap="onclick">语文</view>
+    <view class="list" bind:tap="onclick">数学</view>
+    <view class="list" bind:tap="onclick">英语</view>
+    <view class="list" bind:tap="onclick">政治</view>
+    <view class="list" bind:tap="onclick">生物</view>
+    <view class="list" bind:tap="onclick">地理</view>
+    <view class="list" bind:tap="onclick">历史</view>
+    <view class="list" bind:tap="onclick">物理</view>
+    <view class="list" bind:tap="onclick">化学</view>
+  </view>
+  <view class="sub-info" hidden="{{show}}" bind:tap="onclickhidden">
+    <view class="bg">
+      <view class="info-title">
+        <view title="item">{{userExamList.className}}</view>
+        <view class='item'>{{subNameZH}}</view>
+        <view class='item'>{{userExamList.name}}</view>
+      </view>
+      <view class="info">
+        <view class="title">考试名称</view>
+        <view class="title">科目分数</view>
+      </view>
+      <view class="info" wx:for="{{showList}}" wx:key="">
+        <view class="title">{{item.examName}}</view>
+        <view class="title">{{item.subInfo}}</view>
+      </view>
+    </view>
+  </view>
+</view>

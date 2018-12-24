@@ -5,8 +5,6 @@ const examModel = new ExamModel()
 
 App({
   onLaunch: function () {
-    // examModel.loadData()
-
     // 展示本地存储能力
     // var logs = wx.getStorageSync('logs') || []
     // logs.unshift(Date.now())

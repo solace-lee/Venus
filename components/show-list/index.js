@@ -22,7 +22,6 @@ Component({
    */
   methods: {
     onclicktap() {
-      wx.showLoading()
       wx.setStorageSync('info', this.properties.studentList)
       const name = this.properties.studentList.name
       const examName = this.properties.studentList.examName

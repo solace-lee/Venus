@@ -46,7 +46,6 @@ Page({
     } else {
       const userInfo = wx.getStorageSync("login") || null
       if (!(userInfo == null)) {
-        wx.showLoading()
         // 如果存在保存的登录数据
         // wx.showToast({
         //   title: '正在自动登陆',
@@ -112,7 +111,6 @@ Page({
         // 判断基础数据是否加载成功
         const msg = '请刷新数据后重试'
         this._showMsg(msg)
-        wx.hideLoading()
         return
       }
       for (let i = 0; i < data.length; i++) {
@@ -162,7 +160,6 @@ Page({
         });
       })
     }
-    wx.hideLoading()
   },
 
   _showMsg(event) {
@@ -174,7 +171,7 @@ Page({
   },
 
   goNext() {
-    wx.redirectTo({
+    wx.switchTab({
       url: '/pages/exam/exam'
     })
   },
