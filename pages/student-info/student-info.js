@@ -18,7 +18,6 @@ Page({
   onLoad: function(options) {
     const name = options.name
     const examName = options.examName
-    console.log(options);
     this.setData({
       showData: wx.getStorageSync('info')
     })

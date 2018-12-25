@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -13,7 +13,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.2",
-	"appid": "wxe7f47a2b77e674ad",
+	"appid": "wx08800206b579ceba",
 	"projectname": "Venus",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -42,7 +42,7 @@
 				{
 					"id": 0,
 					"name": "exam",
-					"pathName": "pages/subject/subject",
+					"pathName": "pages/subject-list/subject-list",
 					"query": ""
 				}
 			]

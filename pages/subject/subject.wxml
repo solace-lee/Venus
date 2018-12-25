@@ -13,18 +13,18 @@
   </view>
   <view class="sub-info" hidden="{{show}}" bind:tap="onclickhidden">
     <view class="bg">
-      <view class="info-title">
-        <view title="item">{{userExamList.className}}</view>
-        <view class='item'>{{subNameZH}}</view>
-        <view class='item'>{{userExamList.name}}</view>
+      <view class="sub-title">
+        <view class='sub-name'>{{subNameZH}}</view>
+        <view class="info">
+          <view class="item">{{userExamList[0].className}}</view>
+          <view class='item'>{{userExamList[0].name}}</view>
+        </view>
       </view>
-      <view class="info">
-        <view class="title">考试名称</view>
-        <view class="title">科目分数</view>
-      </view>
-      <view class="info" wx:for="{{showList}}" wx:key="">
-        <view class="title">{{item.examName}}</view>
-        <view class="title">{{item.subInfo}}</view>
+      <view class="list-info">
+        <view class="info" wx:for="{{showList}}" wx:key="">
+          <view class="item">{{item.examName}}</view>
+          <view class='{{item.subInfo >= 60 ? "item" : "item-red"}}'>{{item.subInfo}}</view>
+        </view>
       </view>
     </view>
   </view>

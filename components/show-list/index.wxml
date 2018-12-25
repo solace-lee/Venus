@@ -1,7 +1,9 @@
 <!--components/show-list/index.wxml-->
 <view class="container" bind:tap="onclicktap">
+  <view wx:if="{{show}}" class='name'>{{index}}</view>
   <view class="name">{{studentList.name}}</view>
-  <view class="sum">{{studentList.sum}}</view>
-  <view class="schoolRank">{{studentList.schoolRank}}</view>
-  <view class="classRank">{{studentList.classRank}}</view>
+  <view wx:if="{{!show}}" class="sum">{{studentList.sum}}</view>
+  <view wx:if="{{!show}}" class="schoolRank">{{studentList.schoolRank}}</view>
+  <view wx:if="{{!show}}" class="classRank">{{studentList.classRank}}</view>
+  <view wx:if="{{show}}" class='{{studentList[subName] >= 60 ? "sub" : "sub-red"}}'>{{studentList[subName]}}</view>
 </view>

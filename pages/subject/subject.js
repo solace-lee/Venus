@@ -14,7 +14,7 @@ Page({
     subNameZH: '',
     subName: '',
     userType: null,
-    userExamList: [],
+    userExamList: {},
     showList: [],
     show: true
   },
@@ -35,7 +35,7 @@ Page({
     if (this.data.userType) {
       // 教师用户
       wx.navigateTo({
-        url: '/'
+        url: '/pages/subject-list/subject-list?subName=' + subName + '&subNameZH=' + subNameZH
       })
     } else {
       // 家长用户
@@ -59,7 +59,7 @@ Page({
     })
   },
 
-  onclickhidden(){
+  onclickhidden() {
     this.setData({
       show: true
     })

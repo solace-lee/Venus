@@ -7,6 +7,14 @@ Component({
     studentList: {
       type: Object,
       value: {}
+    },
+    subName: {
+      type: String,
+      value: ''
+    },
+    index: {
+      type: Number,
+      value: 0
     }
   },
 
@@ -14,7 +22,19 @@ Component({
    * 组件的初始数据
    */
   data: {
+    show: false
+  },
 
+  attached() {
+    if (this.properties.subName) {
+      this.setData({
+        show: true
+      })
+    } else {
+      this.setData({
+        show: false
+      })
+    }
   },
 
   /**

@@ -26,3 +26,12 @@
 .classRank{
   flex: 1;
 }
+
+.sub{
+  flex: 1;
+}
+
+.sub-red{
+  color: red;
+  flex: 1;
+}

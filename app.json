@@ -5,7 +5,8 @@
     "pages/student-list/student-list",
     "pages/student-info/student-info",
     "pages/subject/subject",
-    "pages/more/more"
+    "pages/more/more",
+    "pages/subject-list/subject-list"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -14,23 +15,25 @@
     "navigationBarTextStyle": "White"
   },
   "tabBar": {
-    "list": [{
-      "pagePath": "pages/exam/exam",
-      "text": "考试",
-      "iconPath": "images/tab/exam.png",
-      "selectedIconPath": "images/tab/exam@highlight.png"
-    },
-    {
-      "pagePath": "pages/subject/subject",
-      "text": "科目",
-      "iconPath": "images/tab/subject.png",
-      "selectedIconPath": "images/tab/subject@highlight.png"
-    },
-    {
-      "pagePath": "pages/more/more",
-      "text": "更多",
-      "iconPath": "images/tab/more.png",
-      "selectedIconPath": "images/tab/more@highlight.png"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/exam/exam",
+        "text": "考试",
+        "iconPath": "images/tab/exam.png",
+        "selectedIconPath": "images/tab/exam@highlight.png"
+      },
+      {
+        "pagePath": "pages/subject/subject",
+        "text": "科目",
+        "iconPath": "images/tab/subject.png",
+        "selectedIconPath": "images/tab/subject@highlight.png"
+      },
+      {
+        "pagePath": "pages/more/more",
+        "text": "更多",
+        "iconPath": "images/tab/more.png",
+        "selectedIconPath": "images/tab/more@highlight.png"
+      }
+    ]
   }
 }

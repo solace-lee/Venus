@@ -1,0 +1,27 @@
+<!-- pages/subject-list/subject-list.wxml -->
+<view class='container'>
+  <view class='header'>
+    <view class='title'>{{subNameZH}}</view>
+    <view class='select'>
+      <view class='exam-name'>
+        <picker mode="selector" value="{{examIndex}}" range="{{examList}}" bindchange="bindExamChange">
+          <view class="picker">{{examList[examIndex]}}</view>
+        </picker>
+      </view>
+      <view class='class-name'>
+        <picker mode="selector" value="{{classIndex}}" range="{{classList}}" bindchange="bindClassChange">
+          <view class="picker">{{classList[classIndex]}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="info">
+      <view class='{{flat >= 60 ? "flat" : "flat-red"}}'>平均分：{{flat}}</view>
+      <view class='{{pass >= 60 ? "pass" : "pass-red"}}'>及格率：{{pass}}</view>
+    </view>
+  </view>
+  <view class='list-container'>
+    <block wx:for="{{showList}}" wx:key="index">
+      <v-show-list studentList="{{item}}" subName="{{subName}}" index="{{index+1}}" class="list"></v-show-list>
+    </block>
+  </view>
+</view>
