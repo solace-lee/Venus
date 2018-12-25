@@ -91,7 +91,6 @@ Page({
       flat: flat.toFixed(2),
       pass: count.toFixed(2)
     })
-
   },
 
   bindExamChange(event) {

@@ -1,4 +1,19 @@
 <!--pages/more/more.wxml-->
 <view class="container">
+  <view wx:if="{{caidanShow}}" class="surprise">
+    <view class="title">随机数生成器</view>
+    <view class="list">
+      <block wx:for="{{redNum}}" wx:key="">
+        <view class="num">{{item}}</view>
+      </block>
+      <block wx:for="{{blueNum}}" wx:key="">
+        <view class="num-blue">{{item}}</view>
+      </block>
+    </view>
+    <view class="list">
+      <button bind:tap="cut">切</button>
+      <button bind:tap="change">换</button>
+    </view>
+  </view>
   <view class="">搜索</view>
 </view>

@@ -1,18 +1,64 @@
 // pages/more/more.js
+import {
+  random
+} from '../../util/common.js'
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    caidanShow: false,
+    redNum: [],
+    blueNum: [],
+    type: true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.surprise()
+  },
 
+  surprise() {
+    const login = wx.getStorageSync('login')
+    if (login.userName == '陈福兰' || login.userName == '李祖明') {
+      this.setData({
+        caidanShow: true
+      })
+    }
+    if (this.data.type) {
+      this.typeA()
+    } else {
+      this.typeB()
+    }
+  },
+
+  typeA() {
+    this.setData({
+      redNum: random(6, 33),
+      blueNum: random(1, 16)
+    })
+  },
+
+  typeB() {
+    this.setData({
+      redNum: random(5, 35),
+      blueNum: random(2, 12)
+    })
+  },
+
+  cut() {
+    this.setData({
+      type: !this.data.type
+    })
+    this.surprise()
+  },
+
+  change() {
+    this.surprise()
   },
 
   /**

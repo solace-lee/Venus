@@ -42,7 +42,7 @@
 				{
 					"id": 0,
 					"name": "exam",
-					"pathName": "pages/subject-list/subject-list",
+					"pathName": "pages/more/more",
 					"query": ""
 				}
 			]
