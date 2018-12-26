@@ -1,0 +1,14 @@
+<!-- components/search/index.wxml -->
+<view class="container">
+  <view class="input-bar">
+    <input class="bar" placeholder-class="inbar" value="{{text}}" bindinput="searchInput" auto-focus="{{true}}" placeholder="姓名/班级/分数等" />
+    <view class="clean" bind:tap="clean">清除</view>
+  </view>
+  <view class="list">
+    <view class="showList">
+      <block wx:for="{{showList}}" wx:key="item.id">
+        <v-search-list showList="{{item}}"></v-search-list>
+      </block>
+    </view>
+  </view>
+</view>

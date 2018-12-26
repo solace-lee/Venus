@@ -1,4 +1,4 @@
-<!--pages/more/more.wxml-->
+<!-- pages/more/more.wxml -->
 <view class="container">
   <view wx:if="{{caidanShow}}" class="surprise">
     <view class="title">随机数生成器</view>
@@ -11,9 +11,17 @@
       </block>
     </view>
     <view class="list">
-      <button bind:tap="cut">切</button>
-      <button bind:tap="change">换</button>
+      <button class="change" bind:tap="cut">切</button>
+      <button class="change" bind:tap="change">换</button>
     </view>
   </view>
-  <view class="">搜索</view>
+  <view wx:if="{{!caidanShow}}" class="attention">
+    <view class="text">该程序仅适合白云区启明中学初一级使用</view>
+    <view class="text-1">如有疑问请联系初一04班陈老师</view>
+    <view class="text-1">搜索各关键词需使用空格分开</view>
+    <view class="text-1">搜索功能不对家长账户开放</view>
+  </view>
+  <view class="search" wx:if="{{userType}}">
+    <v-search></v-search>
+  </view>
 </view>

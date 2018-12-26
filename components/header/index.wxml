@@ -2,6 +2,7 @@
 <view class='container'>
   <view class='user-name'>{{userName}}</view>
   <!-- <image src="{{avatarUrl}}" /> -->
-  <view wx:if="{{!isLogin}}" bind:tap='goLoginIn' class='login-btn'>登录</view>
-  <view wx:if="{{isLogin}}" bind:tap='goLoginOut' class='login-btn'>登出</view>
+  <view wx:if="{{isLogin}}" bind:tap='goLoginOut' class='login-btn'>
+    <image class="img" src="/images/loginout.png" />
+  </view>
 </view>

@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  text-align: center;
   justify-content: space-between;
   /* background: #eee; */
 }
@@ -17,9 +18,13 @@
 
 .login-btn{
   color: #363;
-  margin-right: 32rpx;
-  padding: 5rpx 10rpx;
-  border-radius: 5rpx;
-  font-size: 36rpx;
-  /* background: #eee */
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+  padding: 10rpx;
+}
+
+.img{
+  width: 50rpx;
+  height: 50rpx;
 }

@@ -44,8 +44,12 @@ Page({
   loadIndex() {
     let index = wx.getStorageSync('index') || 0
     if (index == 0) {
+      let arr = examModel.getExamNameOfData(this.data.examName)
+      arr.sort(function (a, b) {
+        return a.schoolRank - b.schoolRank
+      })
       this.setData({
-        studentList: examModel.getExamNameOfData(this.data.examName)
+        studentList: arr
       })
     } else {
       this.setData({
@@ -57,9 +61,13 @@ Page({
 
   bindClassListChange(event) {
     if ((event.detail.value) == 0) {
+      let arr = examModel.getExamNameOfData(this.data.examName)
+      arr.sort(function (a, b) {
+        return a.schoolRank - b.schoolRank
+      })
       this.setData({
         index: event.detail.value,
-        studentList: examModel.getExamNameOfData(this.data.examName)
+        studentList: arr
       })
     } else {
       this.setData({

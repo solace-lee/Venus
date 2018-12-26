@@ -21,6 +21,7 @@ Page({
     this.setData({
       showData: wx.getStorageSync('info')
     })
+    // wx.setStorageSync('info', {})
   },
 
 

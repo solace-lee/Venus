@@ -1,0 +1,7 @@
+<!--components/search-list/index.wxml-->
+<view class='container' bindtap='onclick'>
+  <view class='item'>{{showList.name}}</view>
+  <view class='item'>{{showList.examName}}</view>
+  <view class='item'>{{showList.className}}</view>
+  <view class='item'>{{showList.sum}}</view>
+</view>

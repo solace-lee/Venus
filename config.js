@@ -1,5 +1,5 @@
 const config = {
-  api_base_url: 'https://lyannachen.github.io/database/'
+  api_base_url: 'https://solacelee.gitee.io/solace/database/'
 }
 
 export {config}

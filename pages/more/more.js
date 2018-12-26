@@ -3,6 +3,11 @@ import {
   random
 } from '../../util/common.js'
 
+import {
+  ExamModel
+} from '../../modules/exam.js'
+
+const examModel = new ExamModel()
 Page({
 
   /**
@@ -10,6 +15,7 @@ Page({
    */
   data: {
     caidanShow: false,
+    userType: false,
     redNum: [],
     blueNum: [],
     type: true
@@ -20,6 +26,9 @@ Page({
    */
   onLoad: function (options) {
     this.surprise()
+    this.setData({
+      userType: examModel.getUserType()
+    })
   },
 
   surprise() {
