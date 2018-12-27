@@ -26,9 +26,12 @@ Page({
    */
   onLoad: function (options) {
     this.surprise()
-    this.setData({
-      userType: examModel.getUserType()
-    })
+    const isLogin = examModel.getIsLogin()
+    if (isLogin) {
+      this.setData({
+        userType: examModel.getUserType()
+      })
+    }
   },
 
   surprise() {
@@ -81,7 +84,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    wx.setTabBarStyle({
+      selectedColor: '#50bba7'
+    })
   },
 
   /**

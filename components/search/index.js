@@ -44,7 +44,8 @@ Component({
       database.forEach(element => {
         let firstList = []
         for (let j in element) {
-          firstList.push(element[j])
+          let a = element[j].toString()
+          firstList.push(a)
         }
         let isThis = false
         for (let i in event) {

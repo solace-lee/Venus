@@ -16,7 +16,8 @@ Page({
     userType: null,
     userExamList: {},
     showList: [],
-    show: true
+    show: true,
+    isLogin: false
   },
 
   /**
@@ -24,12 +25,18 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
+      isLogin: examModel.getIsLogin(),
       userType: examModel.getUserType(),
       userExamList: examModel.getUserExamList()
     })
   },
 
   onclick(event) {
+    if (!this.data.isLogin) {
+      wx.redirectTo({
+        url: '/pages/login/login'
+      })
+    }
     let subNameZH = event._relatedInfo.anchorTargetText
     let subName = this._changeName(subNameZH)
     if (this.data.userType) {
@@ -108,7 +115,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    wx.setTabBarStyle({
+      selectedColor: '#50bba7'
+    })
   },
 
   /**

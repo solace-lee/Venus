@@ -1,8 +1,16 @@
-<!--components/header/header.wxml-->
+<!-- components/header/header.wxml -->
 <view class='container'>
-  <view class='user-name'>{{userName}}</view>
-  <!-- <image src="{{avatarUrl}}" /> -->
+  <view class='title'>
+    <v-image class='user-btn' wx:if="{{!authorized}}" open-type="getUserInfo" bind:getuserinfo="onGetUserInfo">
+      <image class='user-img' slot="img" src='/images/my.png'></image>
+    </v-image>
+    <view wx:if="{{authorized}}" class="user-btn">
+      <image src="{{userInfo.avatarUrl}}" class="user-img" />
+    </view>
+    <view class='user-name'>{{userName}}</view>
+  </view>
   <view wx:if="{{isLogin}}" bind:tap='goLoginOut' class='login-btn'>
     <image class="img" src="/images/loginout.png" />
   </view>
+  <view wx:if="{{!isLogin}}" bind:tap='goLogin' class='login-btn'>登录</view>
 </view>
