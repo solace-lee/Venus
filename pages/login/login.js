@@ -33,6 +33,7 @@ Page({
   },
 
   onLoadData() {
+    // wx.showLoading()
     getData.getExam((res) => {
       this.data.database = res
       examModel.loadData(res)
@@ -47,11 +48,6 @@ Page({
       const userInfo = wx.getStorageSync("login") || null
       if (!(userInfo == null)) {
         // 如果存在保存的登录数据
-        // wx.showToast({
-        //   title: '正在自动登陆',
-        //   icon: 'none',
-        //   duration: 1000
-        // })
         if (!userInfo.userType) {
           // 家长登录
           this.data.userName = userInfo.userName
@@ -103,10 +99,10 @@ Page({
   },
 
   login(event) {
-    // wx.showLoading()
     let list = []
     if (!this.data.userType) {
       const data = this.data.database
+      // wx.hideLoading()
       if (data.length == 0) {
         // 判断基础数据是否加载成功
         const msg = '请刷新数据后重试'
@@ -128,7 +124,6 @@ Page({
           })
         }
       }
-      // wx.hideLoading()
       if (list.length == 0) {
         const msg = '用户名或密码错误'
         this._showMsg(msg)
@@ -157,9 +152,10 @@ Page({
             this._showMsg(msg)
             this.goNext()
           }
-        });
+        })
       })
     }
+    // 教师登录功能结束
   },
 
   _showMsg(event) {

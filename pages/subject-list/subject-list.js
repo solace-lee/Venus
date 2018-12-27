@@ -44,6 +44,7 @@ Page({
   },
 
   loadFirstList() {
+    wx.showLoading()
     // 1.根据选择的考试名筛选列表
     const firstList = examModel.getExamNameOfData(this.data.examList[this.data.examIndex])
     this.loadLastList(firstList)
@@ -91,6 +92,7 @@ Page({
       flat: flat.toFixed(2),
       pass: count.toFixed(2)
     })
+    wx.hideLoading()
   },
 
   bindExamChange(event) {

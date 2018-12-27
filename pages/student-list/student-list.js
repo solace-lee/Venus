@@ -60,6 +60,7 @@ Page({
   },
 
   bindClassListChange(event) {
+    wx.showLoading()
     if ((event.detail.value) == 0) {
       let arr = examModel.getExamNameOfData(this.data.examName)
       arr.sort(function (a, b) {
@@ -76,6 +77,7 @@ Page({
       })
     }
     wx.setStorageSync("index", event.detail.value)
+    wx.hideLoading()
   },
 
   /**

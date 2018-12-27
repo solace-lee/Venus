@@ -2,12 +2,8 @@
 import {
   ExamModel
 } from '../../modules/exam.js'
-// import {
-//   GetData
-// } from '../../util/getData.js'
 
 const examModel = new ExamModel()
-// const getData = new GetData()
 
 Page({
 
