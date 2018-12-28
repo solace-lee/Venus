@@ -6,9 +6,9 @@
   </view>
   <view class="list">
     <view class="showList">
-      <block wx:for="{{showList}}" wx:key="item.id">
+      <view wx:for="{{showList}}" wx:key="item.id" class="list-color">
         <v-search-list showList="{{item}}"></v-search-list>
-      </block>
+      </view>
     </view>
   </view>
 </view>

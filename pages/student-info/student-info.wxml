@@ -2,7 +2,7 @@
 <view class="container">
   <view class="title-header">
     <view class="title">
-      <view title="item">{{showData.className}}</view>
+      <view class="item">{{showData.className}}</view>
       <view class='item'>{{showData.examName}}</view>
       <view class='item'>{{showData.name}}</view>
     </view>

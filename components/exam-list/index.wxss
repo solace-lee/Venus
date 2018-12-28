@@ -1,32 +1,30 @@
 /* components/exam-list/index.wxss */
-.container{
+.container {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.list{
+.list {
   display: flex;
   flex-direction: column;
-  padding-bottom: 15rpx; 
+  padding-bottom: 15rpx;
   margin-top: 15rpx;
-  border-bottom: 1rpx solid #f5f5f5;
 }
 
-.examName{
+.examName {
   color: #50bba7;
 }
 
-.classinfo{
+.classinfo {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   font-size: 32rpx;
-  color: #333;
   margin-top: 5rpx;
 }
 
-.schoolinfo{
+.schoolinfo {
   display: flex;
   flex-direction: row;
   justify-content: space-around;

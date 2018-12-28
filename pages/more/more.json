@@ -1,5 +1,5 @@
 {
-  "usingComponents":{
+  "usingComponents": {
     "v-search": "/components/search/index"
   }
 }

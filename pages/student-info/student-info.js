@@ -1,5 +1,7 @@
 // pages/student-info/student-info.js
-import {ExamModel} from '../../modules/exam.js'
+import {
+  ExamModel
+} from '../../modules/exam.js'
 
 const examModel = new ExamModel()
 
@@ -21,7 +23,7 @@ Page({
     this.setData({
       showData: wx.getStorageSync('info')
     })
-    // wx.setStorageSync('info', {})
+    wx.setStorageSync('info', {})
   },
 
 

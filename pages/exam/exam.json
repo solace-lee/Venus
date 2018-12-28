@@ -1,5 +1,5 @@
 {
-  "usingComponents":{
+  "usingComponents": {
     "v-header": "/components/header/index",
     "v-examlist": "/components/exam-list/index"
   }

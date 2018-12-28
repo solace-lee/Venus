@@ -15,7 +15,6 @@
 .icon {
   width: 144rpx;
   height: 144rpx;
-  /* border-radius: 50%; */
 }
 
 .title {

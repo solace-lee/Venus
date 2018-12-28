@@ -15,9 +15,9 @@
     <view class="bg">
       <view class="sub-title">
         <view class='sub-name'>{{subNameZH}}</view>
-        <view class="info">
-          <view class="item">{{userExamList[0].className}}</view>
-          <view class='item'>{{userExamList[0].name}}</view>
+        <view class="title-info">
+          <view class="item-title">{{userExamList[0].className}}</view>
+          <view class='item-title'>{{userExamList[0].name}}</view>
         </view>
       </view>
       <view class="list-info">

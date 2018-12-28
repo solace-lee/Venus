@@ -17,8 +17,8 @@
     </view>
   </view>
   <view class="list-container">
-    <block wx:for="{{studentList}}" wx:key="">
-      <v-show-list studentList="{{item}}"></v-show-list>
+    <block wx:for="{{studentList}}" wx:key="index">
+      <v-show-list studentList="{{item}}" class="list"></v-show-list>
     </block>
   </view>
 </view>

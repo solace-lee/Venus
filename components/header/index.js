@@ -22,7 +22,7 @@ Component({
     authorized: false,
   },
 
-  attached: function (event) {
+  attached: function(event) {
     this.userAuthorized()
   },
   /**
@@ -60,18 +60,18 @@ Component({
 
     goLoginOut(event) {
       this.data.out++
-      if (this.data.out == 8) {
-        wx.setStorageSync('login', null)
-        wx.redirectTo({
-          url: '/pages/login/login'
-        })
-      }
+        if (this.data.out == 8) {
+          wx.setStorageSync('login', null)
+          wx.redirectTo({
+            url: '/pages/login/login'
+          })
+        }
       setTimeout(() => {
         this.data.out = 0
       }, 3000)
     },
 
-    goLogin(){
+    goLogin() {
       wx.redirectTo({
         url: '/pages/login/login'
       })

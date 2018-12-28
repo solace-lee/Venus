@@ -1,11 +1,12 @@
 /* components/search/index.wxss */
-.container{
+
+.container {
   display: flex;
   flex-direction: column;
-  width: 100%
+  width: 100%;
 }
 
-.input-bar{
+.input-bar {
   position: fixed;
   top: 260rpx;
   width: 100%;
@@ -28,21 +29,28 @@
   color: #50bba7;
 }
 
-.inbar{
+.inbar {
   margin-left: 10rpx;
   color: #50bba7;
 }
 
-.clean{
+.clean {
   font-size: 32rpx;
   padding: 10rpx;
   color: #fff;
   background: #50bba7;
   border-radius: 5rpx;
-  /* margin-left: 40rpx; */
 }
 
-.showList{
-width: 100%;
-margin-top: 360rpx;
+.showList {
+  width: 100%;
+  margin-top: 360rpx;
+}
+
+.list-color {
+  background: rgba(80, 187, 167, 0.2);
+}
+
+.list-color:nth-child(2n) {
+  background: #fff;
 }

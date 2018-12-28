@@ -1,7 +1,8 @@
 /* pages/student-info/student-info.wxss */
+
 .container {
   width: 100%;
-  color: #50bba7;
+  color: #666;
   display: flex;
   flex-direction: column;
   /* text-align: center; */
@@ -27,6 +28,10 @@
   justify-content: space-around;
 }
 
+.item {
+  color: #50bba7;
+}
+
 .sub-title {
   width: 100%;
   height: 80rpx;
@@ -36,7 +41,6 @@
   align-items: center;
   justify-content: space-between;
 }
-
 
 .subject-info {
   width: 100%;
@@ -57,6 +61,12 @@
   text-align: center;
   align-items: center;
   border-bottom: 1px solid #f5f5f5;
+  /* background: #f5f5f5; */
+  background: rgba(80, 187, 167, 0.2);
+}
+
+.sub-info:nth-child(2n) {
+  background: #fff;
 }
 
 .sub {
@@ -65,7 +75,7 @@
 
 .list {
   flex: 1;
-  color: #50bba7;
+  color: #666;
 }
 
 .list-red {
@@ -80,11 +90,10 @@
   flex-direction: row;
   text-align: center;
   align-items: center;
-  /* border-bottom: 1px solid #f5f5f5; */
 }
 
 .rank-info {
-  flex: 1
+  flex: 1;
 }
 
 .rank-foot {
