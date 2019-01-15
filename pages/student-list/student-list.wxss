@@ -69,5 +69,5 @@
 }
 
 .list:nth-child(2n) {
-  background: rgba(80, 187, 167, 0.2);
+  background: #dcf1ed;
 }

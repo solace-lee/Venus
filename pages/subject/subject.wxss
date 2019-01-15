@@ -97,7 +97,7 @@
 }
 
 .info:nth-child(2n) {
-  background: #a7ddd3;
+  background: #dcf1ed;
 }
 
 .item {
