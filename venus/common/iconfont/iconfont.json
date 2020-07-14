@@ -1,0 +1,65 @@
+{
+  "id": "1933033",
+  "name": "fy-parents",
+  "font_family": "iconfont",
+  "css_prefix_text": "fy",
+  "description": "飞燕数学家长端",
+  "glyphs": [
+    {
+      "icon_id": "88077",
+      "name": "right",
+      "font_class": "right",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "8827173",
+      "name": "right",
+      "font_class": "right1",
+      "unicode": "e93e",
+      "unicode_decimal": 59710
+    },
+    {
+      "icon_id": "7605162",
+      "name": "QR-code",
+      "font_class": "QR-code",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "6996232",
+      "name": "相机",
+      "font_class": "xiangji",
+      "unicode": "e710",
+      "unicode_decimal": 59152
+    },
+    {
+      "icon_id": "122722",
+      "name": "add",
+      "font_class": "add",
+      "unicode": "e6b9",
+      "unicode_decimal": 59065
+    },
+    {
+      "icon_id": "11982657",
+      "name": "Home, homepage, menu",
+      "font_class": "Homehomepagemenu",
+      "unicode": "e9ce",
+      "unicode_decimal": 59854
+    },
+    {
+      "icon_id": "15779656",
+      "name": "个人中心-1",
+      "font_class": "gerenzhongxin-1",
+      "unicode": "e6fe",
+      "unicode_decimal": 59134
+    },
+    {
+      "icon_id": "15779783",
+      "name": "主页-1",
+      "font_class": "zhuye-1",
+      "unicode": "e70f",
+      "unicode_decimal": 59151
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+
+$-primary-base: $uni-color-primary;
+$-success-base: $uni-color-success;
+$-warning-base: $uni-color-warning;
+$-error-base: $uni-color-error;
+$-info-base: $uni-text-color;
+$-white-base: #ffffff;
+$-black-base: #000000;
+
+.primary {
+  background-color: $-primary-base !important;
+  border-color: $-primary-base !important;
+}
+.primary--text {
+  color: $-primary-base !important;
+  caret-color: $-primary-base !important;
+}
+
+.success {
+  background-color: $-success-base !important;
+  border-color: $-success-base !important;
+}
+.success--text {
+  color: $-success-base !important;
+  caret-color: $-success-base !important;
+}
+
+.warning {
+  background-color: $-warning-base !important;
+  border-color: $-warning-base !important;
+}
+.warning--text {
+  color: $-warning-base !important;
+  caret-color: $-warning-base !important;
+}
+
+.error {
+  background-color: $-error-base !important;
+  border-color: $-error-base !important;
+}
+.error--text {
+  color: $-error-base !important;
+  caret-color: $-error-base !important;
+}
+
+.info {
+  background-color: $-info-base !important;
+  border-color: $-info-base !important;
+}
+.info--text {
+  color: $-info-base !important;
+  caret-color: $-info-base !important;
+}
+
+.white {
+  background-color: $-white-base !important;
+  border-color: $-white-base !important;
+}
+.white--text {
+  color: $-white-base !important;
+  caret-color: $-white-base !important;
+}
+
+.black {
+  background-color: $-black-base !important;
+  border-color: $-black-base !important;
+}
+.black--text {
+  color: $-black-base !important;
+  caret-color: $-black-base !important;
+}
